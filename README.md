@@ -4,6 +4,8 @@
 
 # TODO List
 
+具备以下能力
+
 - [ ] 自动鉴权
   - [ ] 重试次数
   - [ ] 鉴权 URL 自定义配置
@@ -13,3 +15,12 @@
   - [ ] 全局拦截器
   - [ ] 接口级别拦截器
   - [ ] 实例级别拦截器
+
+# 如何使用
+
+``` ts
+const bizAxiosInstance = new HttpClient(config);
+
+bizAxios.post(url, ...);
+bizAxios.get(url, ...);
+```

@@ -5,7 +5,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error', { semi: true }],
   },
   plugins: ['@typescript-eslint', 'prettier'],
-}
+};
