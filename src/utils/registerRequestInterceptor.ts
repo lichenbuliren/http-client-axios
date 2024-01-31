@@ -9,7 +9,7 @@ import { AxiosRequestInterceptor } from '../interfaces';
  * @param instance
  * @param rquestInterceptors
  */
-export const interceptorRequestRegister = (
+export const registerRequestInterceptor = (
   instance: AxiosInstance,
   rquestInterceptors: AxiosRequestInterceptor[] | AxiosRequestInterceptor
 ): void => {

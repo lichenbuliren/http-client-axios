@@ -33,14 +33,9 @@ export type AxiosResponseInterceptor<T = any, D = any> = AxiosInterceptor<
 export interface IAxiosRequestConfig<D = any, R = ApiResponse<any>>
   extends AxiosRequestConfig<D> {
   retryCount?: number;
-  useGlobalInterceptors?: boolean;
-  /**
-   * for auth retry url config
-   * sometimes it maybe diff with the baseURL
-   */
   authHandle?: (config: IAxiosRequestConfig<D>) => R;
-  interceptors: {
-    request: AxiosRequestInterceptor[] | AxiosRequestInterceptor;
-    response: AxiosResponseInterceptor[] | AxiosResponseInterceptor;
+  interceptors?: {
+    request?: AxiosRequestInterceptor[] | AxiosRequestInterceptor;
+    response?: AxiosResponseInterceptor[] | AxiosResponseInterceptor;
   };
 }
